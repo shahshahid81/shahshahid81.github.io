@@ -1,0 +1,9 @@
+name: Builder
+on: push
+jobs:
+  build:
+    name: Build production website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
