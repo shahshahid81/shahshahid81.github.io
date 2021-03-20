@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install Parcel and build
-        run: \
+        run: |
           PATH=/opt/hostedtoolcache/node/12.21.0/x64/bin/node:/opt/hostedtoolcache/node/12.21.0/x64/bin/npm:$PATH
-          node -v \
-          npm i \
+          node -v 
+          npm i 
           parcel build --no-source-maps index.html
