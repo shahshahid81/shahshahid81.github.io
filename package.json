@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2",
+    "parcel-plugin-purgecss": "^2.1.0"
+  }
+}
