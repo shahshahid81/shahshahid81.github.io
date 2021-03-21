@@ -14,20 +14,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "15.x"
+      - name: Pull main changes to gh-pages branch
+        run: |
+          git fetch 
+          git checkout gh-pages
+          git merge main
       - name: Install npm packages
         run: |
           npm i \
           npm i -g parcel-bundler
       - name: Build Website
         run: parcel build --no-source-maps index.html
-      - name: Push to gh-pages branch
+      - name: Push built files to gh-pages
         run: |
           ls
           git status
-          git reset --hard
-          git fetch 
-          git checkout gh-pages
-          echo "ls"
-          ls
-          echo "find"
-          find ! -name dist/* -name .git/*
