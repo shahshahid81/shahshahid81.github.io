@@ -16,9 +16,7 @@ jobs:
           node-version: "15.x"
       - name: Pull main changes to gh-pages branch
         run: |
-          git fetch -a
-          git branch
-          git branch -d gh-pages
+          git fetch
           git push origin --delete gh-pages
           git checkout -b gh-pages
       - name: Install npm packages
