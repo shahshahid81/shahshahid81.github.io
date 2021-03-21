@@ -26,9 +26,13 @@ jobs:
           npm i -g parcel-bundler
       - name: Build Website
         run: parcel build --no-source-maps index.html
+      - name: Remove unnecessary files
+        run: |
+          rm -rf !(dist)
+          mv dist/* .
+          rmdir dist
       - name: Push built files to gh-pages
         run: |
-          ls
-          git status
-          echo "find"
-          find ! -name dist/* -name .git/*
+          git add .
+          git commit -m "Web built"
+          git push origin gh-pages
