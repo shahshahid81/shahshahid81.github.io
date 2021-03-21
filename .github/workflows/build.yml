@@ -19,7 +19,7 @@ jobs:
           git fetch 
           git checkout gh-pages
           git merge main
-          git push origin master
+          git push origin gh-pages
       - name: Install npm packages
         run: |
           npm i \
