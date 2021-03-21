@@ -29,3 +29,5 @@ jobs:
         run: |
           ls
           git status
+          echo "find"
+          find ! -name dist/* -name .git/*
