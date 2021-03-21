@@ -14,24 +14,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "15.x"
-      - name: Pull main changes to gh-pages branch
-        run: |
-          git fetch
-          git push origin --delete gh-pages
-          git checkout -b gh-pages
       - name: Install npm packages
         run: |
           npm i \
           npm i -g parcel-bundler
       - name: Build Website
         run: parcel build --no-source-maps index.html
-      - name: Remove unnecessary files
-        run: |
-          rm -rf !(dist)
-          mv dist/* .
-          rmdir dist
-      - name: Push built files to gh-pages
-        run: |
-          git add .
-          git commit -m "Web built"
-          git push origin gh-pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
