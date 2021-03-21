@@ -17,11 +17,9 @@ jobs:
       - name: Pull main changes to gh-pages branch
         run: |
           git fetch 
-          git pull
-          git checkout gh-pages
-          git pull
-          git merge main
-          git push origin gh-pages
+          git checkout -d gh-pages
+          git push origin main
+          git checkout -b gh-pages
       - name: Install npm packages
         run: |
           npm i \
