@@ -20,3 +20,7 @@ jobs:
           npm i -g parcel-bundler
       - name: Build Website
         run: parcel build --no-source-maps index.html
+      - name: Push to gh-pages branch
+        run: |
+          ls
+          git status
