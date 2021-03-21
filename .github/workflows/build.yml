@@ -16,7 +16,7 @@ jobs:
           node-version: "15.x"
       - name: Install npm packages
         run: |
-        npm i \
-        npm i -g parcel-bundler
+          npm i \
+          npm i -g parcel-bundler
       - name: Build Website
         run: parcel build --no-source-maps index.html
