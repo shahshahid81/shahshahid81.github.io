@@ -30,6 +30,4 @@ jobs:
           echo "ls"
           ls
           echo "find"
-          find ! -name dist -name .git -exec rm -rv {} \;
-          echo "ls"
-          ls
+          find ! -name dist/* -name .git/*
