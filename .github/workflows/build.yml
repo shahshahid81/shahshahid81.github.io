@@ -24,6 +24,7 @@ jobs:
         run: |
           ls
           git status
+          git reset --hard
           git fetch 
           git checkout gh-pages
           echo "ls"
