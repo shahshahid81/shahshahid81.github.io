@@ -13,10 +13,10 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '15.x'
-      - name: Install Parcel and build
+          node-version: "15.x"
+      - name: Install npm packages
         run: |
-          node -v 
-          npm i 
-          ls
-          parcel build --no-source-maps index.html
+        npm i \
+        npm i -g parcel-bundler
+      - name: Build Website
+        run: parcel build --no-source-maps index.html
