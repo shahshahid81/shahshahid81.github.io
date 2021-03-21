@@ -16,7 +16,7 @@ jobs:
           node-version: "15.x"
       - name: Pull main changes to gh-pages branch
         run: |
-          git fetch 
+          git fetch -a
           git branch
           git branch -d gh-pages
           git push origin --delete gh-pages
