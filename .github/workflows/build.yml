@@ -24,3 +24,8 @@ jobs:
         run: |
           ls
           git status
+          git checkout gh-pages
+          echo "ls"
+          ls
+          echo "find"
+          find ! -name dis
