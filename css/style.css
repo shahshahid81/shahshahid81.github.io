@@ -1,6 +1,6 @@
 :root {
-  --accent: #6366f1;
-  --muted: #6b7280;
+  --accent: #4f46e5; /* indigo-600 */
+  --muted: #94a3b8;  /* slate-400-ish */
 }
 
 /* Social icon colors (kept for compatibility) */
