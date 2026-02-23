@@ -14,9 +14,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18.x"
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - name: Install npm packages
         run: |
-          npm ci
+          npm ci --prefer-offline --no-audit --no-fund
       - name: Build Website
         run: npx parcel build --no-source-maps index.html
       - name: Deploy to gh-pages
