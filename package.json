@@ -3,6 +3,6 @@
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
     "parcel": "^2.0.0-beta.2",
-    "parcel-plugin-purgecss": "^2.1.0"
+    "parcel-plugin-purgecss": "^2.0.0"
   }
 }
